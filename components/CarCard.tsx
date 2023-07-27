@@ -7,6 +7,10 @@ import CustomButton from "@/components/CustomButton";
 import { useState } from "react";
 import { CarDetails } from "@/components";
 
+import steeringWheelImage from '../public/steering-wheel.svg';
+import tireImage from '../public/tire.svg';
+import gasImage from '../public/gas.svg';
+
 interface CarCardProps {
   car: CarProps;
 }
@@ -42,19 +46,19 @@ const CarCard = ({ car }: CarCardProps) => {
       <div className='relative flex w-full mt-2'>
         <div className='flex group-hover:invisible w-full justify-between text-gray'>
           <div className='flex flex-col justify-center items-center gap-2'>
-            <Image src='/steering-wheel.svg' width={20} height={20} alt='steering wheel' />
+            <Image src={steeringWheelImage} width={20} height={20} alt='steering wheel' />
             <p className='text-[14px]'>
               {transmission === 'a' ? 'Automatic' : 'Manual'}
             </p>
           </div>
           <div className='flex flex-col justify-center items-center gap-2'>
-            <Image src='/tire.svg' width={20} height={20} alt='tire' />
+            <Image src={tireImage} width={20} height={20} alt='tire' />
             <p className='text-[14px]'>
               {drive.toUpperCase()}
             </p>
           </div>
           <div className='flex flex-col justify-center items-center gap-2'>
-            <Image src='/gas.svg' width={20} height={20} alt='steering wheel' />
+            <Image src={gasImage} width={20} height={20} alt='steering wheel' />
             <p className='text-[14px]'>
               {city_mpg} MPG
             </p>

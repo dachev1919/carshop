@@ -6,6 +6,7 @@ import { fuels, yearsOfProduction } from '@/constants';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { CarProps } from '@/types';
+import loaderImage from '../public/loader.svg';
 
 export default function Home() {
   const [allCars, setAllCars] = useState([]);
@@ -77,7 +78,7 @@ export default function Home() {
             {loading && (
               <div className='mt-16 w-full flex-center'>
                 <Image
-                  src='/loader.svg'
+                  src={loaderImage}
                   alt='loader'
                   width={50}
                   height={50}

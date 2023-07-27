@@ -4,6 +4,8 @@ import { SearchManufacturer } from './';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { SearchBarProps } from '@/types';
+import modelIconImage from '../public/model-icon.png';
+import magnifyingGlassImage from '../public/magnifying-glass.svg';
 
 const SearchBar = ({setManufacturer, setModel}: SearchBarProps) => {
   const [searchManufacturer, setSearchManufacturer] = useState('');
@@ -30,7 +32,7 @@ const SearchBar = ({setManufacturer, setModel}: SearchBarProps) => {
         <SearchButton otherClasses='sm:hidden' />
       </div>
       <div className='searchbar__item'>
-        <Image src='/model-icon.png' width={25} height={25} className='absolute w-[20px] h-[20px] ml-4' alt='car model' />
+        <Image src={modelIconImage} width={25} height={25} className='absolute w-[20px] h-[20px] ml-4' alt='car model' />
         <input
           type='text'
           name='model'
@@ -50,7 +52,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => {
   return (
     <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
       <Image
-        src='/magnifying-glass.svg'
+        src={magnifyingGlassImage}
         alt='magnifying glass'
         width={40}
         height={40}

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { manufacturers } from "@/constants";
 import { SearchManufacturerProps } from "@/types";
-import {set} from "zod";
+import carLogo from '../public/car-logo.svg';
 
 const SearchManufacturer = ({ selected, setSelected}: SearchManufacturerProps) => {
   const [query, setQuery] = useState('');
@@ -23,7 +23,7 @@ const SearchManufacturer = ({ selected, setSelected}: SearchManufacturerProps) =
         <div className='relative w-full'>
           <Combobox.Button className='absolute top-[14px]'>
             <Image
-              src='/car-logo.svg'
+              src={carLogo}
               width={20}
               height={20}
               className='ml-4'

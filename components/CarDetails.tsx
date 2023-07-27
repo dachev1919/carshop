@@ -5,6 +5,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from "react";
 import Image from "next/image";
 import {generateCarImageUrl} from "@/utils";
+import closeImage from '../public/close.svg';
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -43,7 +44,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       onClick={closeModal}
                       className='absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full'
                     >
-                      <Image src='/close.svg' width={20} height={20} alt='close' className='object-contain' />
+                      <Image src={closeImage} width={20} height={20} alt='close' className='object-contain' />
                     </button>
                     <div className='flex-1 flex flex-col gap-3'>
                       <div className='relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg'>

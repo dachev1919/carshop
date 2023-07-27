@@ -4,7 +4,7 @@ import { CustomFilterProps } from '@/types';
 import {Fragment, useState} from 'react';
 import { Listbox, Transition } from '@headlessui/react'
 import Image from "next/image";
-import {updateSearchParams} from "@/utils";
+import chevronUpDownImage from '../public/chevron-up-down.svg';
 
 const CustomFilter = ({title, options, setFilter}: CustomFilterProps) => {
   const [selected, setSelected] = useState(options[0]);
@@ -18,7 +18,7 @@ const CustomFilter = ({title, options, setFilter}: CustomFilterProps) => {
         <div className='relative w-fit z-10'>
           <Listbox.Button className='custom-filter__btn'>
             <span className='block truncate'>{selected.title}</span>
-            <Image src='/chevron-up-down.svg' width={20} height={20} className='ml-4 object-contain' alt='chevron up down' />
+            <Image src={chevronUpDownImage} width={20} height={20} className='ml-4 object-contain' alt='chevron up down' />
           </Listbox.Button>
           <Transition
             as={Fragment}
