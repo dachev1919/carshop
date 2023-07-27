@@ -10,6 +10,7 @@ import { CarDetails } from "@/components";
 import steeringWheelImage from '../public/steering-wheel.svg';
 import tireImage from '../public/tire.svg';
 import gasImage from '../public/gas.svg';
+import rightArrowImage from '../public/right-arrow.svg';
 
 interface CarCardProps {
   car: CarProps;
@@ -69,7 +70,7 @@ const CarCard = ({ car }: CarCardProps) => {
             title='View More'
             containerStyles='w-full py-[16px] rounded-full bg-primary-blue'
             textStyles='text-white text-[14px] leading-[17px] font-bold'
-            rightIcon='/right-arrow.svg'
+            rightIcon={rightArrowImage}
             handleClick={() => setIsOpen(true)}
           />
         </div>
